@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Products Display</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: white;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Navigation Bar */
+    .top-half {
+      background-color: black;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    .snip1211 {
+      display: flex;
+      justify-content: center;
+      background-color: black;
+    }
+
+    .snip1211 li {
+      list-style: none;
+      margin: 0 15px;
+    }
+
+    .snip1211 a {
+      color: rgba(255, 255, 255, 0.5);
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 1px;
+      padding: 10px 0;
+      display: block;
+      position: relative;
+    }
+
+    .snip1211 a:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background-color: #34495e;
+      opacity: 0;
+      transition: all 0.35s ease;
+    }
+
+    .snip1211 a:hover,
+    .snip1211 .current a {
+      color: #ffffff;
+    }
+
+    .snip1211 a:hover:before,
+    .snip1211 .current a:before {
+      opacity: 1;
+      top: 0;
+    }
+
+    /* Main Content */
+    .bottom-half {
+      background-color: white;
+      padding: 20px;
+    }
+
+    .Main_Title {
+      text-align: center;
+      margin: 20px 0;
+      color: black;
+      font-size: xx-large;
+    }
+
+    .product-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product-box {
+      flex: 1;
+      min-width: 250px;
+      max-width: 300px;
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      padding: 20px;
+      text-decoration: none; /* Ensure no text decoration */
+    }
+
+    .product-box a {
+      text-decoration: none; /* Ensure no text decoration on links */
+      color: black; /* Ensure text color is consistent */
+    }
+
+    .product-box img {
+      width: 100%;
+      border-radius: 15px;
+      border: 10px solid transparent;
+    }
+
+    .product-box h1,
+    .product-box h2 {
+      margin: 10px 0;
+      color: black;
+      text-decoration: none; /* Remove any underline */
+    }
+
+    .product-box h2 {
+      color: black; /* Ensure the price color matches */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top-half">
+    <ul class="snip1211">
+      <li><a href="wesite.html">Home</a></li>
+      <li><a href="AboutMe.html">About Me</a></li>
+      <li><a href="Product.html">Product</a></li>
+    </ul>
+  </div>
+
+  <div class="Main_Title">
+    <h1>Products</h1>
+  </div>
+
+  <div class="bottom-half">
+    <div class="product-container">
+      <div class="product-box">
+        <a href="https://osoyoo.store/products/osoyoo-uno-board-for-arduino-model-lacc200600?variant=31648857915503" target="_blank">
+          <img src="images/OSOYOO_UNO_Board_for_Arduino.png" alt="OSOYOO UNO Board for Arduino" />
+          <h1>OSOYOO UNO Board for Arduino</h1>
+          <h2>$18.99 USD</h2>
+        </a>
+      </div>
+
+      <div class="product-box">
+        <a href="https://osoyoo.store/products/esp8266-wifi-shiled-for-arduino-uno?_pos=2&_sid=655268caa&_ss=r" target="_blank">
+          <img src="images/L1-1.png" alt="OSOYOO WIFI Shield V1.3" />
+          <h1>OSOYOO WIFI Shield V1.3</h1>
+          <h2>$12.99 USD</h2>
+        </a>
+      </div>
+
+      <div class="product-box">
+        <a href="https://osoyoo.store/products/osoyoo-model-x-motor-driver-module-for-arduino?_pos=1&_psq=OSOYOO+model+X+motor+driver+module&_ss=e&_v=1.0" target="_blank">
+          <img src="images/Motor_Driver_Module.webp" alt="Model-X Motor Driver Module" />
+          <h1>Model-X Motor Driver Module</h1>
+          <h2>$9.99 USD</h2>
+        </a>
+      </div>
+
+      <div class="product-box">
+        <a href="https://www.amazon.com/gp/product/B08PBQ1N1G/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1" target="_blank">
+          <img src="images/water_pump.jpg" alt="Mini DIY Water Pump" />
+          <h1>Mini DIY Water Pump</h1>
+          <h2>$9.99 USD</h2>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

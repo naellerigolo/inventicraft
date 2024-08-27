@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Water fountain</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+    .snip1211 {
+      font-family: 'Raleway', Arial, sans-serif;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+    .snip1211 * {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-transition: all 0.35s ease;
+      transition: all 0.35s ease;
+    }
+    .snip1211 li {
+      display: inline-block;
+      list-style: outside none none;
+      margin: 0.5em 1.5em;
+      padding: 0;
+    }
+    .snip1211 a {
+      padding: 0.4em 0;
+      color: rgba(255, 255, 255, 0.5);
+      position: relative;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .snip1211 a:before {
+      position: absolute;
+      content: '';
+      -webkit-transition: all 0.35s ease;
+      transition: all 0.35s ease;
+      opacity: 0;
+      top: 25%;
+      bottom: 25%;
+      left: 0;
+      right: 0;
+      border-top: 3px solid #34495e;
+      border-bottom: 3px solid #34495e;
+    }
+    .snip1211 a:hover,
+    .snip1211 .current a {
+      color: #ffffff;
+    }
+    .snip1211 a:hover:before,
+    .snip1211 .current a:before {
+      opacity: 1;
+      top: 0;
+      bottom: 0;
+    }
+
+
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: rgb(255, 255, 255);
+      height:10vh;
+    }
+
+    
+
+  
+    .top-half {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 8vh;
+      background-color: black;
+    }
+
+    .bottom-half {
+      position: absolute;
+      top: 10vh;
+      left: 0;
+      width: 100%;
+      height: auto;
+      background-color: white;
+      z-index: 0;
+    }
+
+
+    .water_fountain img {
+      position: absolute;
+      top: 33%;
+      left: 50%;
+      transform: translate(-50%);
+      border-radius: 15px;
+      border: 5px solid transparent;
+      max-width: 100%;
+      max-height: 100%;
+      z-index: 999;
+      width: 700px;
+      transition: width 0.35s ease, height 0.35s ease;
+}
+
+    .Title_Why_I_Built{
+      position: absolute; z-index: 999; top: 108%; left: 0%;
+      font-size: x-large;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      word-wrap: break-word;
+      width:calc(100vw - 50.5vw);
+      border: 1px solid rgba(0, 0, 0);
+    }
+    .Text_Why_I_Built{
+      position: absolute; 
+      z-index: 999; 
+      top: 119%; 
+      left: 1%;
+      word-wrap: break-word;
+      width:calc(100vw - 53vw); 
+      border: 1px solid rgba(0, 0, 0);
+    }
+    @media only screen and (max-width: 805px) {
+      .Text_Why_I_Built {
+    top: 130%;
+    font-size: medium;
+
+  }
+}
+.Title_List_Item{
+      position: absolute; z-index: 999; top: 108%; left: 50%;
+      font-size: x-large;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      word-wrap: break-word;
+      width:calc(100vw - 50.5vw);
+      border: 1px solid rgba(0, 0, 0, 0);
+    }
+
+      .List_Item{
+      position: absolute; 
+      z-index: 999; 
+      top: 119%; 
+      left: 53%;
+      word-wrap: break-word;
+      width:calc(100vw - 53vw); 
+      border: 1px solid rgba(0, 0, 0 );
+      cursor: pointer;
+    
+  }
+
+
+    .Main_Title {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      transform: translateX(-50%);
+      font-size: x-large;
+      font-family: 'Poppins', sans-serif
+      
+    }
+    .horizontal_lineV1 {
+      position: absolute;
+      top: 110%; 
+      left: 0;
+      width: 50%;
+      transform: translateX(0);
+      border-bottom: 2px solid black;
+      z-index: 999;
+}
+    .vertical_line {
+      position: absolute;
+      top: 110%;
+      left: 50%;
+      height: auto;
+      width: 2px;
+      background-color: rgb(0, 0, 0);
+      z-index: 999;
+      overflow: hidden;
+}
+.horizontal_lineV2 {
+      position: absolute;
+      top: 150%;
+      left: 50%;
+      width: 50%;
+      transform: translateX(0);
+      border-bottom: 2px solid black;
+      z-index: 999;
+}
+
+    
+  </style>
+</head>
+
+<body>
+
+    <div class="water_fountain">
+        <img src="/Users/naelelbatji/Desktop/CODING/WEBSITE/images/waterfountain copy.jpg"/>
+    </div>
+    
+      <div class="top-half"></div> 
+  <div class="flexbox_text">
+      <div class="horizontal_lineV1"></div>
+      <div class="vertical_line"></div>
+      <div class="horizontal_lineV2"></div>
+      <div class="box"></div>
+
+
+
+
+
+    <div class="bottom-half">
+
+      <section>
+
+        <div class="container"></div>
+
+      </section>
+
+    </div>
+
+
+    <div class="Title_Why_I_Built">
+
+      <h1>Why Did I Built It ?</h1>
+
+    </div>
+
+    <div class="Text_Why_I_Built">
+
+      <h1>I decided to create a water fountain specifically for my cat after noticing that many cats are not fond of drinking water from stagnant sources. Recognizing the importance of hydration for feline health, I took it upon myself to design and build a unique water fountain tailored to my cat's preferences. The flowing water not only adds an element of freshness but also appeals to my cat's natural instincts.
+
+        The custom water fountain not only serves the practical purpose of encouraging my cat to drink more water, promoting overall well-being, but it also provides an aesthetically pleasing addition to the living space. It's a small yet thoughtful way to enhance my pet's daily life and ensure they stay adequately hydrated, contributing to their health and happiness.</h1>
+    </div>
+    <div class="Title_List_Item">
+      <h1>Components</h1>
+    </div>
+
+    <div class="List_Item">
+      <a id="a2" onclick="window.open('https://www.amazon.com/dp/B089D1YG11?psc=1&ref=ppx_yo2ov_dt_b_product_details', '_blank')"style="color: black";><h1><li>Arduino </li></h1></a>
+      <a id="a2" onclick="window.open('https://www.amazon.com/dp/B08166SLDF?psc=1&ref=ppx_yo2ov_dt_b_product_details', '_blank')"style="color: black";><h1><li>Arduino Shield </li></h1></a>
+      <a id="a2" onclick="window.open('https://www.amazon.com/dp/B0BWMCF6GN?psc=1&ref=ppx_yo2ov_dt_b_product_details', '_blank')"style="color: black";><h1><li>Motor Driver </li></h1></a>
+      <a id="a2" onclick="window.open('https://www.amazon.com/dp/B0B25LQQPC?psc=1&ref=ppx_yo2ov_dt_b_product_details', '_blank')"style="color: black";><h1><li>Water_Pump </li></h1></a>
+      </h1>
+    </div>
+
+
+
+  </div>
+  <div class="Main_Title">
+
+    <h1>Water Fountain</h1>
+
+  </div>
+
+  <ul class="snip1211">
+    <li><a href="wesite.html">Home</a></li>
+    <li><a href="AboutMe.html">About Me</a></li>
+    <li><a href="Product.html">Product</a></li>
+  </ul>
+  
+  <script>
+    function adjustBottomHalfHeight() {
+        var textElement = document.querySelector('.Text_Why_I_Built');
+
+        var bottomHalf = document.querySelector('.bottom-half');
+        var vertical_line = document.querySelector('.vertical_line');
+        var contentHeight = textElement.offsetHeight;
+  
+        bottomHalf.style.height = contentHeight + 'px';
+        vertical_line.style.height = contentHeight + 'px';
+        
+      }
+  
+      // Call the function when the window is resized
+      window.addEventListener('resize', adjustBottomHalfHeight);
+  
+      // Call the function initially
+      adjustBottomHalfHeight();
+
+
+
+
+
+      function resizeImageOnScroll() {
+        const horizontalLine = document.querySelector('.horizontal_lineV1');
+        const image = document.querySelector('.water_fountain img');
+
+        if (!horizontalLine || !image) return;
+
+        // Get the position of the horizontal line and the image
+        const lineTop = horizontalLine.getBoundingClientRect().top;
+        const imageBottom = image.getBoundingClientRect().bottom;
+        
+        // Define a threshold for when the image should start resizing
+        const threshold = 50; // Adjust this value as needed
+
+        // Calculate the distance between the horizontal line and the image
+        const distance = lineTop - imageBottom;
+
+        // Resize the image based on the distance
+        if (distance < threshold) {
+            // Reduce the size of the image proportionally
+            const scale = Math.max(0.5, 1 - (threshold - distance) / threshold);
+            image.style.width = (700 * scale) + 'px'; // Original width is 700px
+            image.style.height = 'auto'; // Maintain aspect ratio
+        } else {
+            // Reset image size when the line is far away
+            image.style.width = '700px';
+            image.style.height = 'auto';
+        }
+    }
+
+    // Call the function when the window is scrolled or resized
+    window.addEventListener('scroll', resizeImageOnScroll);
+    window.addEventListener('resize', resizeImageOnScroll);
+
+    // Call the function initially
+    resizeImageOnScroll();
+
+    </script> 
+</body>    
+</html>

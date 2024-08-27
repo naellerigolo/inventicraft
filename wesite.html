@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototypes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Navigation Bar */
+        .top-half {
+            background-color: black;
+            padding: 10px 0;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .snip1211 {
+            display: flex;
+            justify-content: center;
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .snip1211 li {
+            margin: 0 15px;
+        }
+
+        .snip1211 a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 1px;
+            padding: 10px 0;
+            display: block;
+            position: relative;
+        }
+
+        .snip1211 a:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background-color: #34495e;
+            opacity: 0;
+            transition: all 0.35s ease;
+        }
+
+        .snip1211 a:hover,
+        .snip1211 .current a {
+            color: #ffffff;
+        }
+
+        .snip1211 a:hover:before,
+        .snip1211 .current a:before {
+            opacity: 1;
+            top: 0;
+        }
+
+        /* Main Title */
+        .Main_Title {
+            margin-top: 10vh;
+            text-align: center;
+            color: black;
+            font-size: xx-large;
+            padding-bottom: 20px;
+        }
+
+        /* Content Layout */
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .item {
+            flex-basis: 45%;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .item img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 15px;
+            border: 5px solid transparent;
+        }
+
+        .item h1 {
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: black;
+        }
+
+        /* Media Query for smaller screens */
+        @media (max-width: 768px) {
+            .item {
+                flex-basis: 100%;
+            }
+
+            .Main_Title {
+                font-size: large;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="top-half">
+        <ul class="snip1211">
+            <li><a href="wesite.html">Home</a></li>
+            <li><a href="AboutMe.html">About Me</a></li>
+            <li><a href="Product.html">Product</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Title -->
+    <div class="Main_Title">
+        <h1>Thing to Build</h1>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <div class="item">
+            <a href="WaterFountain.html">
+                <img src="images/waterfountain copy.jpg" alt="Water Fountain for a Cat" />
+                <h1>Water Fountain for a Cat</h1>
+            </a>
+        </div>
+
+        <div class="item">
+            <a href="My_PC.html">
+                <img src="images/mainPCimage.png" alt="My Computer" />
+                <h1>My Computer</h1>
+            </a>
+        </div>
+    </div>
+
+</body>
+
+</html>
